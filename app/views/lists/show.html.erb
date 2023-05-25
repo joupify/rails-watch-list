@@ -1,0 +1,12 @@
+<h1><%= @list.name %></h1>
+
+<% if @bookmarks.present? %>
+  <% @bookmarks.each do |bookmark| %>
+    <div>
+      <h3><%= bookmark.movie.title %></h3>
+      <p><%= bookmark.comment %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>No bookmarks found for this list.</p>
+<% end %>
